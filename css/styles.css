@@ -1,0 +1,106 @@
+/*
+███    ██  █████  ██    ██
+████   ██ ██   ██ ██    ██
+██ ██  ██ ███████ ██    ██
+██  ██ ██ ██   ██  ██  ██
+██   ████ ██   ██   ████
+*/
+.fixed-top {
+  top: calc((100% / 6) / 2);
+  transform: translateY(-50%);
+}
+
+.nav {
+  background-color: pink;
+
+  justify-content: space-between;
+  font-size: 1em;
+}
+
+.nav-link {
+  background-color: brown;
+}
+
+.section:nth-child(odd) {
+  background: #004e7c;
+background: -moz-linear-gradient(top, #004e7c 0%, #66ffcc 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, #004e7c), color-stop(100%, #66ffcc));
+background: -webkit-linear-gradient(top, #004e7c 0%, #66ffcc 100%);
+background: -o-linear-gradient(top, #004e7c 0%, #66ffcc 100%);
+background: -ms-linear-gradient(top, #004e7c 0%, #66ffcc 100%);
+background: linear-gradient(to bottom, #004e7c 0%, #66ffcc 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004e7c', endColorstr='#66ffcc', GradientType=0 );
+}
+
+
+
+.wrapper {
+  background-color: rgba(255, 0, 0, 0.4);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.onesixth-title {
+  background-color: rgba(0, 255, 0, 0.4);
+  height: calc(100vh / 6);
+  width: 100%;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.onesixth-spacing {
+  display: flex;
+  height:  calc(100vh / 6);
+  width: 100%;
+}
+
+.title{
+
+  font-size: 3em;
+
+}
+
+
+
+
+/*
+██████  ██       █████   ██████ ███████
+██   ██ ██      ██   ██ ██      ██
+██████  ██      ███████ ██      █████
+██      ██      ██   ██ ██      ██
+██      ███████ ██   ██  ██████ ███████
+*/
+
+.foursixth {
+  height: calc(100vh / 6 * 4)
+}
+
+.row-places {
+  height: calc(100% / 4 * 3);
+}
+
+.places-item {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.places-item:nth-child(odd) {
+  background-color: black;
+
+
+}
+
+.places-title {
+  color: white;
+}
+
+.places-icon {
+  display: block;
+  width: 80%;
+  height: 75px;
+  background-color:white;
+
+}
