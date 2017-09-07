@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Sapporo City Guide</title>
+  <meta name="viewport" content="width=device-width initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap-reboot.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
@@ -15,7 +16,11 @@
     $(document).ready(function() {
       $('#fullpage').fullpage({
         fixedElements: ".navbar",
-        css3: true
+        responsiveWidth: '992',
+        responsiveHeight: '720',
+        css3: true,
+
+
       });
     });
   </script>
@@ -34,7 +39,7 @@
    ███ ███  ██ ██      ██   ██ ██ ██████  ██████  ███████ ██   ████
   -->
 
-    <div class="section section1 d-none">
+    <div class="section section1 ">
       <!--
     ███    ██  █████  ██    ██
     ████   ██ ██   ██ ██    ██
@@ -69,11 +74,12 @@
     ██   ██ ██    ██ ██  ██  ██ ██
     ██   ██  ██████  ██      ██ ███████
     -->
-      <div class="wrapper">
+      <div class="wrapper-home">
         <div class="onesixth-title">
           <div class="title">Home</div>
         </div>
-        <div class="onesixth"></div>
+        <div class="onesixth-spacing"></div>
+        <div class="foursixth"></div>
 
 
 
@@ -81,45 +87,52 @@
 
       </div>
     </div>
-    <div class="section section2">
-      <div class="wrapper">
+    <!--
+    ██████  ██       █████   ██████ ███████ ███████
+    ██   ██ ██      ██   ██ ██      ██      ██
+    ██████  ██      ███████ ██      █████   ███████
+    ██      ██      ██   ██ ██      ██           ██
+    ██      ███████ ██   ██  ██████ ███████ ███████
+    -->
+    <div class="section fp-auto-height-responsive section2 ">
+      <div class="wrapper-places">
         <div class="onesixth-title">
           <div class="title">Places</div>
         </div>
         <div class="onesixth-spacing"></div>
         <div class="container-fluid foursixth p-5">
-          <div class="row row-places">
-            <div class="places-item col-md-2">
+          <div class="row row-places no-gutters">
+            <div class="places-item col-lg-2 col-md-4 col-sm-6 col-xs-1">
               <div class="places-title">Place</div>
               <div class="places-icon"></div>
               <div class="places-img"></div>
 
             </div>
-            <div class="places-item col-md-2">
+            <div class="places-item col-lg-2 col-md-4 col-sm-6 col-xs-1">
               <div class="places-title">Place</div>
               <div class="places-icon"></div>
               <div class="places-img"></div>
 
             </div>
-            <div class="places-item col-md-2">
+            <div class="places-item col-lg-2 col-md-4 col-sm-6 col-xs-1">
               <div class="places-title">Place</div>
               <div class="places-icon"></div>
               <div class="places-img"></div>
 
             </div>
-            <div class="places-item col-md-2">
+            <div class="places-item col-lg-2 col-md-4 col-sm-6 col-xs-1">
               <div class="places-title">Place</div>
               <div class="places-icon"></div>
               <div class="places-img"></div>
 
             </div>
-            <div class="places-item col-md-2">
+            <div class="places-item col-lg-2 col-md-4 col-sm-6 col-xs-1">
               <div class="places-title">Place</div>
               <div class="places-icon"></div>
               <div class="places-img"></div>
 
             </div>
-            <div class="places-item col-md-2">
+            <div class="places-item col-lg-2 col-md-4 col-sm-6 col-xs-1">
               <div class="places-title">Place</div>
               <div class="places-icon"></div>
               <div class="places-img"></div>
@@ -133,14 +146,10 @@
     </div>
     <div class="section section3">
       <div class="wrapper">
-        <div class="onesixth">
+        <div class="onesixth-title">
           <div class="title">Events</div>
         </div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
+
       </div>
 
     </div>
