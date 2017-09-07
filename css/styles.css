@@ -99,8 +99,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004e7c', end
 
 .places-icon {
   display: block;
-  width: 80%;
+  width: 100%;
   height: 75px;
+  background-color:white;
+
+}
+
+.places-img {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  height: 100%;
   background-color:white;
 
 }
