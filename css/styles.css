@@ -173,8 +173,75 @@
 }
 
 
+/*
+██████  ██   ██  ██████  ████████  ██████
+██   ██ ██   ██ ██    ██    ██    ██    ██
+██████  ███████ ██    ██    ██    ██    ██
+██      ██   ██ ██    ██    ██    ██    ██
+██      ██   ██  ██████     ██     ██████
+*/
+
+.slide{
+    height: calc(100vh / 6 * 4);
+
+}
+
+.slide:nth-child(odd) {
+  background-color:brown;
+}
+
+.slide:nth-child(even) {
+  background-color:pink;
+}
+
+.photo-desc-wrapper {
+  display: flex;
+  flex-flow:column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: calc(100vh / 6 * 4);
+
+}
+
+.photo-desc {
+
+  align-self: flex-end;
+  border: 1px solid red;
+  width: 100%;
+  text-align: center;
+padding: 30px;
+
+}
 
 
+
+.fp-controlArrow.fp-prev {
+
+    border-color: transparent #66ffcc transparent transparent;
+}
+.fp-controlArrow.fp-next {
+
+    border-color: transparent transparent transparent #004e7c;
+}
+
+/*
+.fp-controlArrow.fp-prev {
+    left: 0;
+    border: none;
+    width: 50px;
+    height: 101px;
+    background: url(left.png) no-repeat;
+    cursor: pointer;
+}
+.fp-controlArrow.fp-next {
+    right: 0;
+    border: none;
+    width: 50px;
+    height: 101px;
+    background: url(right.png) no-repeat;
+    cursor: pointer;
+}
+*/
 /*
  ██████  ██    ██ ███████ ██████  ██ ███████ ███████
 ██    ██ ██    ██ ██      ██   ██ ██ ██      ██
@@ -185,7 +252,7 @@
 */
 
 @media (max-width:991px) {
- .foursixth {
+ .wrapper-places .foursixth {
     height: auto;
 
   }
