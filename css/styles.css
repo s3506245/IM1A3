@@ -6,6 +6,11 @@
 ██   ████ ██   ██   ████
 */
 
+#myMenu .active {
+  color:red;
+
+}
+
 .fixed-top {
   top: calc((100% / 6) / 2);
   transform: translateY(-50%);
@@ -53,6 +58,16 @@
   width: 100%;
 }
 
+
+.foursixth {
+  height: calc(100vh / 6 * 4)
+}
+
+.threesixth {
+    height: calc(100vh / 6 * 3)
+}
+
+
 .title {
   font-size: 3em;
 }
@@ -86,12 +101,8 @@
   flex-direction: column;
 }
 
-.foursixth {
-  height: calc(100vh / 6 * 4)
-}
-
 .row-places {
-  height: calc(100% / 4 * 3);
+  height: 100%;
 }
 
 .places-item {
@@ -124,6 +135,45 @@
   border: 1px solid red;
 }
 
+/*
+███████ ██    ██ ███████ ███    ██ ████████ ███████
+██      ██    ██ ██      ████   ██    ██    ██
+█████   ██    ██ █████   ██ ██  ██    ██    ███████
+██       ██  ██  ██      ██  ██ ██    ██         ██
+███████   ████   ███████ ██   ████    ██    ███████
+*/
+
+.wrapper-events {
+  /*background-color: rgba(255, 0, 0, 0.4);*/
+  display: flex;
+  flex-direction: column;
+}
+
+.row-events {
+  height: 100%;
+}
+
+.calendar {
+  background-color: brown;
+  height: 100%;
+}
+
+.wrapper-events .container {
+    height: calc(100vh / 6 * 4)
+}
+
+.wrapper-events .container-fluid {
+    height: calc(100vh / 6 * 4)
+}
+
+.row .col-3 {
+  background-color: pink;
+  height: calc((100vh / 6 * 4) /3);
+  border: 1px solid red;
+}
+
+
+
 
 /*
  ██████  ██    ██ ███████ ██████  ██ ███████ ███████
@@ -135,14 +185,22 @@
 */
 
 @media (max-width:991px) {
-.wrapper-places  .foursixth {
+ .foursixth {
     height: auto;
+
   }
+  .threesixth {
+     height: auto;
+       margin-bottom: 200px;
+   }
   .places-item {
     height: 400px;
     margin-top: 20px;
   }
   .wrapper-places {
+    height: auto;
+  }
+  .wrapper-events {
     height: auto;
   }
 }
