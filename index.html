@@ -18,7 +18,7 @@
         fixedElements: ".navbar",
         responsiveWidth: '992',
         responsiveHeight: '720',
-        anchors:['home', 'places', 'events', 'photo', 'food', 'transport', 'contact'],
+        anchors: ['home', 'places', 'events', 'photo', 'food', 'transport', 'contact'],
         css3: true,
         bigSectionsDestination: top,
         menu: '#myMenu',
@@ -26,6 +26,13 @@
 
       });
     });
+    var startSlideSections = function() {
+      setInterval(function() {
+        $.fn.fullpage.moveSlideRight();
+      }, 1000000);
+    };
+
+    startSlideSections();
   </script>
 </head>
 
@@ -60,15 +67,9 @@
     </nav>
   </div>
   <div id="fullpage">
-    <!--
-  ██     ██ ██ ██████  ██   ██ ██ ██████  ██████  ███████ ███    ██
-  ██     ██ ██ ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ████   ██
-  ██  █  ██ ██ ██████  ███████ ██ ██   ██ ██   ██ █████   ██ ██  ██
-  ██ ███ ██ ██ ██      ██   ██ ██ ██   ██ ██   ██ ██      ██  ██ ██
-   ███ ███  ██ ██      ██   ██ ██ ██████  ██████  ███████ ██   ████
-  -->
 
-    <div class="section section1 " >
+
+    <div class="section section1 ">
 
       <!--
     ██   ██  ██████  ███    ███ ███████
@@ -170,10 +171,10 @@
               <div class="col-1 d-none d-lg-block events-spacing"></div>
               <div class="col-lg-8 calendar">
                 <div class="row">
-                <div class="col-3"></div>
-                <div class="col-3"></div>
-                <div class="col-3"></div>
-                <div class="col-3"></div>
+                  <div class="col-3"></div>
+                  <div class="col-3"></div>
+                  <div class="col-3"></div>
+                  <div class="col-3"></div>
                 </div>
                 <div class="row">
                   <div class="col-3"></div>
@@ -213,12 +214,66 @@
         <div class="onesixth-title">
           <div class="title">Photo</div>
         </div>
-      <div class="foursixth">
+
+        <div class="slide fp-auto-height">
+          <div class="container">
+            <div class="photo-desc-wrapper">
+              <div class="photo-desc">
+                blahblahblahbcbcvbc bvcbcvbcvb gdgdgdgdg
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide fp-auto-height">
+          <div class="container">
+            <div class="photo-desc-wrapper">
+              <div class="photo-desc">
+                blahblahblahbcbcvbc bvcbcvbcvb gdgdgdgdg
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide fp-auto-height">
+          <div class="container">
+            <div class="photo-desc-wrapper">
+              <div class="photo-desc">
+                blahblahblahbcbcvbc bvcbcvbcvb gdgdgdgdg
+              </div>
+            </div>
+          </div>
+         </div>
+        <div class="slide fp-auto-height ">
+          <div class="container">
+            <div class="photo-desc-wrapper">
+              <div class="photo-desc">
+                blahblahblahbcbcvbc bvcbcvbcvb gdgdgdgdg
+              </div>
+            </div>
+          </div>
+         </div>
+        <div class="slide fp-auto-height ">
+          <div class="container">
+            <div class="photo-desc-wrapper">
+              <div class="photo-desc">
+                blahblahblahbcbcvbc bvcbcvbcvb gdgdgdgdg
+              </div>
+            </div>
+          </div>
+         </div>
+        <div class="slide fp-auto-height ">
+          <div class="container">
+            <div class="photo-desc-wrapper">
+              <div class="photo-desc">
+                blahblahblahbcbcvbc bvcbcvbcvb gdgdgdgdg
+              </div>
+            </div>
+          </div>
+         </div>
+
+
 
       </div>
 
-      <div class="onesixth-spacing"></div>
-      </div>
     </div>
 
 
