@@ -1,3 +1,9 @@
+@import url('//fonts.googleapis.com/earlyaccess/roundedmplus1c.css');
+body {
+  font-family: "Varela Round";
+}
+
+
 /*
 ███    ██  █████  ██    ██
 ████   ██ ██   ██ ██    ██
@@ -6,9 +12,12 @@
 ██   ████ ██   ██   ████
 */
 
-#myMenu .active {
-  color:red;
-
+.navbar .myMenu .active {
+  transition: all 500ms;
+  pointer-events: none;
+  color: white;
+  border-radius: 50px;
+  background-color: rgb(255, 204, 153);
 }
 
 .fixed-top {
@@ -17,16 +26,42 @@
 }
 
 .nav {
+  font-size: 1em;
   /*  background-color: pink;*/
   justify-content: space-between;
-  font-size: 1em;
 }
 
 .nav-link {
-  /*background-color: brown;
-  border: 1px solid red;*/
   text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 204, 153);
+  font-size: 1.2em;
 }
+
+.nav-link:hover {
+  transition: all 250ms;
+  color: rgb(255, 204, 153);
+  border-right: 5px solid rgb(255, 204, 153);
+  border-left: 5px solid rgb(255, 204, 153);
+  border-radius: 2px;
+}
+
+.navbar .container-fluid {
+  margin: 9;
+  padding: 0;
+  border: 5px solid #004e7c;
+  border-radius: 25px;
+  background-color: white;
+}
+
+
+/*
+███████ ███████  ██████ ████████ ██  ██████  ███    ██
+██      ██      ██         ██    ██ ██    ██ ████   ██
+███████ █████   ██         ██    ██ ██    ██ ██ ██  ██
+     ██ ██      ██         ██    ██ ██    ██ ██  ██ ██
+███████ ███████  ██████    ██    ██  ██████  ██   ████
+*/
 
 .section:nth-child(odd) {
   background: #004e7c;
@@ -40,37 +75,135 @@
 }
 
 .section:nth-child(even) {
-  background: lightblue;
+  background: white;
 }
 
-.onesixth-title {
-  background-color: rgba(0, 255, 0, 0.4);
-  height: calc(100vh / 6);
-  width: 100%;
+.section:nth-child(1) {
+  background: white;
+}
+
+.odd .onesixth-title {
   display: flex;
+  width: 100%;
+  height: calc(100vh / 6);
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.even .onesixth-title {
+  display: flex;
+  width: 100%;
+  height: calc(100vh / 6);
+  color: rgb(255, 204, 153);
   align-items: center;
   justify-content: center;
 }
 
 .onesixth-spacing {
   display: flex;
-  height: calc(100vh / 6);
   width: 100%;
+  height: calc(100vh / 6);
 }
-
 
 .foursixth {
   height: calc(100vh / 6 * 4)
 }
 
 .threesixth {
-    height: calc(100vh / 6 * 3)
+  height: calc(100vh / 6 * 3)
 }
 
+.twosixth {
+  height: calc(100vh / 6 * 2)
+}
 
 .title {
   font-size: 3em;
 }
+
+.snow-bg {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.snow-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.snow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin: 0;
+  border: none;
+}
+
+.even .snow3 {
+  width: 3000px;
+  margin: 0;
+  padding: 0;
+  background: url('../img/snow3.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 700px;
+}
+
+.even .snow2 {
+  width: 3000px;
+  margin: 0;
+  padding: 0;
+  background: url('../img/snow2.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 300px;
+}
+
+.even .snow1 {
+  width: 3000px;
+  margin: 0;
+  padding: 0;
+  background: url('../img/snow1.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 100px;
+}
+
+.odd .snow3 {
+  width: 3000px;
+  margin: 0;
+  padding: 0;
+  background: url('../img/snow6.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 700px;
+}
+
+.odd .snow2 {
+  width: 3000px;
+  margin: 0;
+  padding: 0;
+  background: url('../img/snow5.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 300px;
+}
+
+.odd .snow1 {
+  width: 3000px;
+  margin: 0;
+  padding: 0;
+  background: url('../img/snow4.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 100px;
+}
+
 
 /*
 ██   ██  ██████  ███    ███ ███████
@@ -81,9 +214,129 @@
 */
 
 .wrapper-home {
-  /*background-color: rgba(255, 0, 0, 0.4);*/
   display: flex;
   flex-direction: column;
+}
+
+.logo-home {
+  display: block;
+  width: 110px;
+  height: 110px;
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.home-city-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  min-height: 500px;
+  background-size: cover;
+}
+
+.layer1 {
+  top: 18%;
+  animation-name: loop1;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-image: url("../img/layer1.png");
+  background-position: 0 0;
+}
+
+@keyframes loop1 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 3190px 0;
+  }
+}
+
+.layer3 {
+  top: 9%;
+  animation-name: loop1;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-image: url("../img/layer3.png");
+  background-position: 0 0;
+}
+
+@keyframes loop1 {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: 3195px center;
+  }
+}
+
+.layer5 {
+  top: 0;
+  animation-name: loop1;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-image: url("../img/layer5.png");
+}
+
+@keyframes loop1 {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: 3199px 0;
+  }
+}
+
+.layer4 {
+  top: 10%;
+  display: block;
+  background-image: url("../img/sun.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.layer2 {
+  top: 0;
+  text-align: center;
+  color: #004e7c;
+  font-size: 8em;
+}
+
+.layer2 span {
+  position: relative;
+  top: -100px;
+  font-family: 'Rounded Mplus 1c';
+  font-size: 0.5em;
+  font-weight: 300;
+}
+
+.wrapper-home .row {
+  position: relative;
+  top: -100%;
+  display: flex;
+  padding: 20px;
+  vertical-align: middle;
+  color: #004e7c;
+  border: 15px solid #004e7c;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9em;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -95,8 +348,17 @@
 ██      ███████ ██   ██  ██████ ███████
 */
 
+.logo-places {
+  display: block;
+  width: 110px;
+  height: 110px;
+  background-image: url("../img/icon/places.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 .wrapper-places {
-  /*background-color: rgba(255, 0, 0, 0.4);*/
   display: flex;
   flex-direction: column;
 }
@@ -108,32 +370,81 @@
 .places-item {
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
   align-items: center;
 }
 
-.places-item:nth-child(odd) {
-  background-color: black;
-}
-
 .places-title {
-  color: white;
+  position: relative;
+  top: -20px;
+  text-align: center;
+  color: #004e7c;
+  font-size: 1.3em;
 }
 
 .places-icon {
   display: block;
-  width: 80%;
+  width: 100%;
   height: 75px;
-  background-color: white;
+  text-align: center;
+  color: #004e7c;
+  font-family: 'Rounded Mplus 1c';
+  font-size: 0.9em;
+  font-weight: 300;
 }
 
 .places-img {
-  margin-top: 10px;
   display: block;
   width: 100%;
   height: 100%;
-  background-color: white;
-  border: 1px solid red;
+  margin-top: 10px;
+  border: 10px solid white;
+  border-radius: 100px;
+  background-color: teal;
+  box-shadow: 0 -10px #004e7c;
 }
+
+.places-item:nth-child(1) .places-img {
+  background: url('../img/places/beermuseum.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.places-item:nth-child(2) .places-img {
+  background: url('../img/places/odoripark.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.places-item:nth-child(3) .places-img {
+  background: url('../img/places/ramen.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.places-item:nth-child(4) .places-img {
+  background: url('../img/places/kaitaku.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.places-item:nth-child(5) .places-img {
+  background: url('../img/places/moepark.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.places-item:nth-child(6) .places-img {
+  background: url('../img/places/hoheikan.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper-places .col-12 {
+  text-align: center;
+  color: #004e7c;
+}
+
 
 /*
 ███████ ██    ██ ███████ ███    ██ ████████ ███████
@@ -143,8 +454,17 @@
 ███████   ████   ███████ ██   ████    ██    ███████
 */
 
+.logo-events {
+  display: block;
+  width: 110px;
+  height: 110px;
+  background-image: url("../img/icon/events.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 .wrapper-events {
-  /*background-color: rgba(255, 0, 0, 0.4);*/
   display: flex;
   flex-direction: column;
 }
@@ -154,22 +474,69 @@
 }
 
 .calendar {
-  background-color: brown;
+  overflow: hidden;
   height: 100%;
+  border: 10px solid #004e7c;
+  border-radius: 50px;
+  box-shadow: -200px 0 #004e7c;
 }
 
 .wrapper-events .container {
-    height: calc(100vh / 6 * 4)
+  height: calc(100vh / 6 * 4)
 }
 
 .wrapper-events .container-fluid {
-    height: calc(100vh / 6 * 4)
+  height: calc(100vh / 6 * 4)
 }
 
-.row .col-3 {
-  background-color: pink;
-  height: calc((100vh / 6 * 4) /3);
-  border: 1px solid red;
+.wrapper-events .row .col-4 {
+  height: calc((100vh / 6 * 4) /2 - 5px);
+  border: 15px solid white;
+  border-radius: 25px;
+  background-color: white;
+}
+
+.wrapper-events .row:nth-child(1)>.col-4:nth-child(1) {
+  background-image: url(../img/events/lilac.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper-events .row:nth-child(1)>.col-4:nth-child(2) {
+  background-image: url(../img/events/white.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper-events .row:nth-child(1)>.col-4:nth-child(3) {
+  background-image: url(../img/events/yosakoi.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper-events .row:nth-child(2)>.col-4:nth-child(1) {
+  background-image: url(../img/events/snow.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper-events .row:nth-child(2)>.col-4:nth-child(2) {
+  background-image: url(../img/events/autumn.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper-events .row:nth-child(2)>.col-4:nth-child(3) {
+  background-image: url(../img/events/munich.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.event-desc {
+  position: absolute;
+  bottom: 10px;
+  color: white;
+  font-size: 1.2em;
 }
 
 
@@ -181,67 +548,296 @@
 ██      ██   ██  ██████     ██     ██████
 */
 
-.slide{
-    height: calc(100vh / 6 * 4);
-
+.logo-photo {
+  display: block;
+  width: 110px;
+  height: 110px;
+  background-image: url("../img/icon/photo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
-.slide:nth-child(odd) {
-  background-color:brown;
+.wrapper-photo .slide {
+  box-sizing: border-box;
+  height: calc(100vh / 6 * 4);
+  border-radius: 50px;
 }
 
-.slide:nth-child(even) {
-  background-color:pink;
+.wrapper-photo .slide:nth-child(1) {
+  background: url('../img/photo/bird.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper-photo .slide:nth-child(2) {
+  background: url('../img/photo/snow.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper-photo .slide:nth-child(3) {
+  background: url('../img/photo/tv.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper-photo .slide:nth-child(4) {
+  background: url('../img/photo/moiwa.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 .photo-desc-wrapper {
   display: flex;
-  flex-flow:column;
+  height: calc(100vh / 6 * 4);
+  flex-flow: column;
   align-items: flex-end;
   justify-content: flex-end;
-  height: calc(100vh / 6 * 4);
-
 }
 
 .photo-desc {
-
-  align-self: flex-end;
-  border: 1px solid red;
+  position: relative;
+  top: 50px;
+  box-sizing: border-box;
   width: 100%;
+  height: 200px;
+  padding: 20px;
   text-align: center;
-padding: 30px;
-
+  color: #004e7c;
+  border: 15px solid white;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 1);
+  font-size: 0.9em;
+  font-size: 1.5em;
+  align-self: flex-end;
 }
-
-
 
 .fp-controlArrow.fp-prev {
-
-    border-color: transparent #66ffcc transparent transparent;
+  left: 30px;
+  width: 44px;
+  height: 49px;
+  cursor: pointer;
+  border: none;
+  background: url('../img/leftarrow.png') no-repeat;
 }
+
 .fp-controlArrow.fp-next {
-
-    border-color: transparent transparent transparent #004e7c;
+  right: 30px;
+  width: 44px;
+  height: 49px;
+  cursor: pointer;
+  border: none;
+  background: url('../img/rightarrow.png') no-repeat;
 }
+
 
 /*
-.fp-controlArrow.fp-prev {
-    left: 0;
-    border: none;
-    width: 50px;
-    height: 101px;
-    background: url(left.png) no-repeat;
-    cursor: pointer;
-}
-.fp-controlArrow.fp-next {
-    right: 0;
-    border: none;
-    width: 50px;
-    height: 101px;
-    background: url(right.png) no-repeat;
-    cursor: pointer;
-}
+███████  ██████   ██████  ██████
+██      ██    ██ ██    ██ ██   ██
+█████   ██    ██ ██    ██ ██   ██
+██      ██    ██ ██    ██ ██   ██
+██       ██████   ██████  ██████
 */
+
+.logo-food {
+  display: block;
+  width: 110px;
+  height: 110px;
+  background-image: url("../img/icon/food.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.wrapper-food .row {}
+
+.food-item-wrapper {
+  display: flex;
+  padding: 10px;
+  border-radius: 50px;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.food-icon {
+  display: block;
+  width: 100%;
+  height: 200px;
+  border: 10px solid white;
+  border-radius: 50px;
+  background-color: black;
+}
+
+.food1 .food-icon {
+  background: url('../img/food/miso.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.food2 .food-icon {
+  background: url('../img/food/curry.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.food3 .food-icon {
+  background: url('../img/food/khan.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.food4 .food-icon {
+  background: url('../img/food/sea.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.food-desc {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: #004e7c;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.food-desc span {
+  font-size: 1.2em;
+}
+
+
+/*
+████████ ██████   █████  ███    ██ ███████ ██████   ██████  ██████  ████████
+   ██    ██   ██ ██   ██ ████   ██ ██      ██   ██ ██    ██ ██   ██    ██
+   ██    ██████  ███████ ██ ██  ██ ███████ ██████  ██    ██ ██████     ██
+   ██    ██   ██ ██   ██ ██  ██ ██      ██ ██      ██    ██ ██   ██    ██
+   ██    ██   ██ ██   ██ ██   ████ ███████ ██       ██████  ██   ██    ██
+*/
+
+.logo-transport {
+  display: block;
+  width: 110px;
+  height: 110px;
+  background-image: url("../img/icon/transport.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.wrapper-transport .slide {
+  height: calc(100vh / 6 * 3);
+}
+
+.wrapper-transport .container {
+  height: 70%;
+}
+
+.wrapper-transport .row {
+  height: 100%;
+}
+
+.wrapper-transport .fp-controlArrow {
+  top: calc( 50% + (100vh / 6) / 2);
+}
+
+.transport-item-wrapper {
+  height: 70%;
+}
+
+.wrapper-transport {
+  color: #004e7c;
+}
+
+.transport-photo {
+  height: 100%;
+  border: 10px solid #66ffcc;
+  border-radius: 50px;
+}
+
+.transport-desc-wrapper {
+  display: flex;
+  border: 10px solid #004e7c;
+  border-radius: 50px;
+  align-items: center;
+}
+
+.transport-desc {}
+
+.transport-photo1 {
+  background: url('../img/transport/bus.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.transport-photo2 {
+  background: url('../img/transport/streetcar.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.transport-photo3 {
+  background: url('../img/transport/jr.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.transport-photo4 {
+  background: url('../img/transport/subway.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.transport-photo5 {
+  background: url('../img/transport/velotaxi.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+
+/*
+ ██████  ██████  ███    ██ ████████  █████   ██████ ████████
+██      ██    ██ ████   ██    ██    ██   ██ ██         ██
+██      ██    ██ ██ ██  ██    ██    ███████ ██         ██
+██      ██    ██ ██  ██ ██    ██    ██   ██ ██         ██
+ ██████  ██████  ██   ████    ██    ██   ██  ██████    ██
+*/
+
+.logo-contact {
+  display: block;
+  width: 110px;
+  height: 110px;
+  background-image: url("../img/icon/contact.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.wrapper-contact {
+  color: white;
+}
+
+.wrapper-contact .onesixth-spacing {
+  width: 100%;
+}
+
+.contact-text-1 {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.contact-text-1 span {
+  font-size: 0.5em;
+}
+
+.contact-text-2 {
+  width: 100%;
+  text-align: center;
+  font-size: 5em;
+}
+
+
 /*
  ██████  ██    ██ ███████ ██████  ██ ███████ ███████
 ██    ██ ██    ██ ██      ██   ██ ██ ██      ██
@@ -252,14 +848,13 @@ padding: 30px;
 */
 
 @media (max-width:991px) {
- .wrapper-places .foursixth {
+  .wrapper-places .foursixth {
     height: auto;
-
   }
   .threesixth {
-     height: auto;
-       margin-bottom: 200px;
-   }
+    height: auto;
+    margin-bottom: 200px;
+  }
   .places-item {
     height: 400px;
     margin-top: 20px;
@@ -268,6 +863,21 @@ padding: 30px;
     height: auto;
   }
   .wrapper-events {
+    height: auto;
+  }
+  .wrapper-food {
+    height: auto;
+  }
+  .wrapper-food .foursixth {
+    height: auto;
+  }
+  .nav-link {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-height: 720px) {
+  .wrapper-food .twosixth {
     height: auto;
   }
 }

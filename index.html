@@ -5,9 +5,11 @@
   <meta charset="utf-8">
   <title>Sapporo City Guide</title>
   <meta name="viewport" content="width=device-width initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap-reboot.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="css/jquery.fullPage.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
@@ -21,7 +23,7 @@
         anchors: ['home', 'places', 'events', 'photo', 'food', 'transport', 'contact'],
         css3: true,
         bigSectionsDestination: top,
-        menu: '#myMenu',
+        menu: '.myMenu',
 
 
       });
@@ -29,7 +31,7 @@
     var startSlideSections = function() {
       setInterval(function() {
         $.fn.fullpage.moveSlideRight();
-      }, 1000000);
+      }, 30000);
     };
 
     startSlideSections();
@@ -48,7 +50,7 @@
 -->
   <div class="posfix">
     <nav class="navbar fixed-top d-none d-md-block">
-      <div class="container" id="myMenu">
+      <div class="container myMenu">
 
 
         <div class="nav col-5">
@@ -59,17 +61,35 @@
         <div class="col-2"></div>
         <div class="nav col-5">
           <a data-menuanchor="food" href="#food" class="nav-link col-3">Food</a>
-          <a data-menuanchor="transport" href="#transport" class="nav-link col-6 ">Transportation</a>
+          <a data-menuanchor="transport" href="#transport" class="nav-link col-6 ">Transport</a>
           <a data-menuanchor="contact" href="#contact" class="nav-link col-3">Contact</a>
         </div>
       </div>
 
     </nav>
   </div>
+
+  <div class="posfix2">
+    <nav class="navbar nav2 fixed-bottom d-md-none">
+      <div class="container-fluid myMenu">
+
+
+
+        <a data-menuanchor="places" href="#places" class="nav-link col-4">Places</a>
+        <a data-menuanchor="events" href="#events" class="nav-link col-4">Events</a>
+        <a data-menuanchor="photo" href="#photo" class="nav-link col-4">Photo</a>
+
+        <a data-menuanchor="food" href="#food" class="nav-link col-3">Food</a>
+        <a data-menuanchor="transport" href="#transport" class="nav-link col-6 ">Transport</a>
+        <a data-menuanchor="contact" href="#contact" class="nav-link col-3">Contact</a>
+
+      </div>
+    </nav>
+  </div>
   <div id="fullpage">
 
 
-    <div class="section section1 ">
+    <div class="section section1 even fp-auto-height ">
 
       <!--
     ██   ██  ██████  ███    ███ ███████
@@ -80,10 +100,38 @@
     -->
       <div class="wrapper-home">
         <div class="onesixth-title">
-          <div class="title">Home</div>
+          <div class="title">
+            <div class="logo-home"></div>
+          </div>
         </div>
-        <div class="onesixth-spacing"></div>
-        <div class="foursixth"></div>
+        <div class="foursixth">
+
+          <div class="home-city-wrapper">
+            <div class="layer layer5">
+
+            </div>
+            <div class="layer layer4">
+              <div class="sun"></div>
+            </div>
+            <div class="layer layer3">
+
+            </div>
+            <div class="layer layer2">SAPPORO <br><span>- 札 幌 -</span></div>
+            <div class="layer layer1"></div>
+          </div>
+        </div>
+        <div class="onesixth-spacing">
+          <div class="container">
+            <div class="row ">
+              <div class="col-9 home-desc">
+
+                Sapporo (札幌) is one of Japan's newest city and was once the gathering spot of the Ainu. Today, it has become the 5th-largest city in Japan, built upon a grid block structure like an American city.<br> Although it is relatively young compared
+                to other cities in Japan, it still possess great and rich culture along with its modern feel.
+              </div>
+            </div>
+          </div>
+        </div>
+
 
 
 
@@ -98,54 +146,72 @@
     ██      ██      ██   ██ ██      ██           ██
     ██      ███████ ██   ██  ██████ ███████ ███████
     -->
-    <div class="section fp-auto-height-responsive section2 ">
+    <div class="section fp-auto-height-responsive section2 even ">
       <div class="wrapper-places">
         <div class="onesixth-title">
-          <div class="title">Places</div>
+          <div class="title">
+            <div class="logo-places"></div>
+          </div>
         </div>
-        <div class="onesixth-spacing d-none d-md-block"></div>
+        <div class="onesixth-spacing">
+          <div class="container">
+            <div class="row justify-content">
+              <div class="col-12">
+                Being a fairly new city, Sapporo doesn't have too much historical sites to offer compared to other places, but it does have an assortment of interesting places to visit for your trips, including shopping malls, parks, gardens and various monuments.
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="container-fluid threesixth">
           <div class="row row-places no-gutters">
             <div class="places-item col-lg-2 col-md-4 col-sm-6 col-xs-1">
-              <div class="places-title">Place</div>
-              <div class="places-icon"></div>
+              <div class="places-title">Sapporo <br>Beer Musem</div>
+              <div class="places-icon">サッポロビール博物館</div>
               <div class="places-img"></div>
 
             </div>
             <div class="places-item col-lg-2 col-md-4 col-sm-6 col-xs-1">
-              <div class="places-title">Place</div>
-              <div class="places-icon"></div>
+              <div class="places-title">Odori<br>Park</div>
+              <div class="places-icon">大通公園</div>
               <div class="places-img"></div>
 
             </div>
             <div class="places-item col-lg-2 col-md-4 col-sm-6 col-xs-1">
-              <div class="places-title">Place</div>
-              <div class="places-icon"></div>
+              <div class="places-title">Ganso Sapporo<br>Ramen Yokocho</div>
+              <div class="places-icon">元祖さっぽろラーメン横丁</div>
               <div class="places-img"></div>
 
             </div>
             <div class="places-item col-lg-2 col-md-4 col-sm-6 col-xs-1">
-              <div class="places-title">Place</div>
-              <div class="places-icon"></div>
+              <div class="places-title">Kaitaku <br> Historical Village</div>
+              <div class="places-icon">開拓の村</div>
               <div class="places-img"></div>
 
             </div>
             <div class="places-item col-lg-2 col-md-4 col-sm-6 col-xs-1">
-              <div class="places-title">Place</div>
-              <div class="places-icon"></div>
+              <div class="places-title">Moerenuma <br> Park</div>
+              <div class="places-icon">モエレ沼公園 </div>
               <div class="places-img"></div>
 
             </div>
             <div class="places-item col-lg-2 col-md-4 col-sm-6 col-xs-1">
-              <div class="places-title">Place</div>
-              <div class="places-icon"></div>
+              <div class="places-title">Hoheikan <br> <br></div>
+              <div class="places-icon">豊平館</div>
               <div class="places-img"></div>
 
             </div>
 
           </div>
         </div>
-        <div class="onesixth-spacing d-none d-md-block"></div>
+        <div class="onesixth-spacing">
+          <div class="snow-bg">
+            <div class="snow-wrapper">
+              <div class="snow snow1"></div>
+              <div class="snow snow2"></div>
+              <div class="snow snow3"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -157,37 +223,46 @@
     ██       ██  ██  ██      ██  ██ ██    ██         ██
     ███████   ████   ███████ ██   ████    ██    ███████
     -->
-    <div class="section section3">
+    <div class="section section3 odd">
       <div class="wrapper-events">
         <div class="onesixth-title">
-          <div class="title">Events</div>
+          <div class="title">
+            <div class="logo-events"></div>
+          </div>
         </div>
         <div class="foursixth">
           <div class="container">
             <div class="row row-events">
               <div class="col-lg-2 d-none d-lg-flex year2017wrapper">
-                <div class="year2017">2017</div>
+                <div class="year2017"></div>
               </div>
               <div class="col-1 d-none d-lg-block events-spacing"></div>
               <div class="col-lg-8 calendar">
                 <div class="row">
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
+                  <div class="col-4">
+                    <div class="event-desc">Lilac Festival</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="event-desc">White Illumination</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="event-desc">Yosakoi Soran Festival</div>
+                  </div>
+
                 </div>
                 <div class="row">
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
+                  <div class="col-4">
+                    <div class="event-desc">Snow Festival</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="event-desc">Autumn Festival</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="event-desc">Munich Christmas Market</div>
+                  </div>
+
                 </div>
-                <div class="row">
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
-                  <div class="col-3"></div>
-                </div>
+
 
 
               </div>
@@ -197,7 +272,16 @@
 
 
         </div>
-        <div class="onesixth-spacing "></div>
+        <div class="onesixth-spacing ">
+          <div class="snow-bg">
+            <div class="snow-wrapper">
+              <div class="snow snow1"></div>
+              <div class="snow snow2"></div>
+              <div class="snow snow3"></div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>
@@ -209,26 +293,19 @@
     ██      ██   ██ ██    ██    ██    ██    ██
     ██      ██   ██  ██████     ██     ██████
     -->
-    <div class="section section4">
+    <div class="section section4 even">
       <div class="wrapper-photo">
         <div class="onesixth-title">
-          <div class="title">Photo</div>
+          <div class="title">
+            <div class="logo-photo"></div>
+          </div>
         </div>
 
         <div class="slide fp-auto-height">
           <div class="container">
             <div class="photo-desc-wrapper">
               <div class="photo-desc">
-                blahblahblahbcbcvbc bvcbcvbcvb gdgdgdgdg
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide fp-auto-height">
-          <div class="container">
-            <div class="photo-desc-wrapper">
-              <div class="photo-desc">
-                blahblahblahbcbcvbc bvcbcvbcvb gdgdgdgdg
+                Feeding the birds at Odori Park
               </div>
             </div>
           </div>
@@ -237,38 +314,39 @@
           <div class="container">
             <div class="photo-desc-wrapper">
               <div class="photo-desc">
-                blahblahblahbcbcvbc bvcbcvbcvb gdgdgdgdg
+                Watching performances at the Snow Festival
               </div>
             </div>
           </div>
-         </div>
-        <div class="slide fp-auto-height ">
+        </div>
+        <div class="slide fp-auto-height">
           <div class="container">
             <div class="photo-desc-wrapper">
               <div class="photo-desc">
-                blahblahblahbcbcvbc bvcbcvbcvb gdgdgdgdg
+                Sapporo TV Tower at night
               </div>
             </div>
           </div>
-         </div>
-        <div class="slide fp-auto-height ">
+        </div>
+        <div class="slide fp-auto-height">
           <div class="container">
             <div class="photo-desc-wrapper">
               <div class="photo-desc">
-                blahblahblahbcbcvbc bvcbcvbcvb gdgdgdgdg
+                West Central Sapporo back in 1970
               </div>
             </div>
           </div>
-         </div>
-        <div class="slide fp-auto-height ">
-          <div class="container">
-            <div class="photo-desc-wrapper">
-              <div class="photo-desc">
-                blahblahblahbcbcvbc bvcbcvbcvb gdgdgdgdg
-              </div>
+        </div>
+        <div class="onesixth-spacing ">
+          <div class="snow-bg">
+            <div class="snow-wrapper">
+              <div class="snow snow1"></div>
+              <div class="snow snow2"></div>
+              <div class="snow snow3"></div>
             </div>
           </div>
-         </div>
+
+        </div>
 
 
 
@@ -276,43 +354,202 @@
 
     </div>
 
+    <!--
+    ███████  ██████   ██████  ██████
+    ██      ██    ██ ██    ██ ██   ██
+    █████   ██    ██ ██    ██ ██   ██
+    ██      ██    ██ ██    ██ ██   ██
+    ██       ██████   ██████  ██████
+    -->
 
 
-
-    <div class="section section5">
-      <div class="wrapper">
-        <div class="onesixth">
-          <div class="title">Food</div>
+    <div class="section section5 fp-auto-height-responsive odd">
+      <div class="wrapper-food">
+        <div class="onesixth-title">
+          <div class="title">
+            <div class="logo-food"></div>
+          </div>
         </div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
+        <div class="foursixth">
+          <div class="container">
+            <div class="row foursixth">
+              <div class="col-1 d-none d-md-block"></div>
+              <div class="col-md-10 col-xs-12">
+                <div class="row ">
+                  <div class="col-md-6 col-xs-12">
+                    <div class="food-item-wrapper twosixth food1">
+                      <div class="food-icon"></div>
+                      <div class="food-desc"><span>Miso Ramen</span><br>Hokkaido Ramen uses a rich miso broth (usually finished with a pat of butter). The noodles are perfectly chewy, the broth is rich without being too heavy, the pork is meltingly tender and the eggs are what
+                        every ramen egg aspires to be.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <div class="food-item-wrapper twosixth food2">
+                      <div class="food-icon"></div>
+                      <div class="food-desc"><span>Soup Curry</span> <br>It’s a curry in a form of soup that served with the various kinds of vegetable and meat with rice on the side. A popular dish throughout Japan originated from Sapporo You can choose the kind of soup, the
+                        topping, the spicy level and amount of rice. </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row ">
+                  <div class="col-md-6 col-xs-12">
+                    <div class="food-item-wrapper twosixth food3">
+                      <div class="food-icon"></div>
+                      <div class="food-desc"><span>Genghis Khan</span> <br>Genghis Khan is a dish consisting of meat (usually mutton) and vegetables cooked on a dome shaped metal grill in the middle of the table. The meat is usually dipped in a shoyu based sauce and eaten right
+                        off the grill.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <div class="food-item-wrapper twosixth food4">
+                      <div class="food-icon"></div>
+                      <div class="food-desc"><span>Seafood</span> <br> Many claimed it to be the best seafood in the world. The cold sea surrounding Hokkaido is filled with abundant supply of nutritious planktons that serves as an excellent habitat for high quality and delectable
+                        seafood.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-1 d-none d-md-block"></div>
+            </div>
+          </div>
+
+        </div>
+        <div class="onesixth-spacing">
+          <div class="snow-bg">
+            <div class="snow-wrapper">
+              <div class="snow snow1"></div>
+              <div class="snow snow2"></div>
+              <div class="snow snow3"></div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
-    <div class="section section6">
-      <div class="wrapper">
-        <div class="onesixth">
-          <div class="title">Transportation</div>
+
+
+    <!--
+    ████████ ██████   █████  ███    ██ ███████ ██████   ██████  ██████  ████████
+       ██    ██   ██ ██   ██ ████   ██ ██      ██   ██ ██    ██ ██   ██    ██
+       ██    ██████  ███████ ██ ██  ██ ███████ ██████  ██    ██ ██████     ██
+       ██    ██   ██ ██   ██ ██  ██ ██      ██ ██      ██    ██ ██   ██    ██
+       ██    ██   ██ ██   ██ ██   ████ ███████ ██       ██████  ██   ██    ██
+    -->
+    <div class="section section6 even">
+      <div class="wrapper-transport">
+        <div class="onesixth-title">
+          <div class="title">
+            <div class="logo-transport"></div>
+          </div>
         </div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
+        <div class="onesixth-spacing">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-4"></div>
+              <div class="col-4 " style="text-align: center">
+                There are many ways to travel within Sapporo. It is recommended to buy a smartcard for ease of travel and for other transactions.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide fp-auto-height">
+          <div class="container">
+            <div class="transport-item-wrapper row">
+              <div class="transport-photo col-md-5 transport-photo1"></div>
+              <div class="col-md-7 transport-desc-wrapper">
+                <div class="transport-desc">Bus <br>There are bus terminals in various locations in Sapporo City, including those directly connected to subway stations. Extensive regular-route buses link different locations in the city and are operated by three companies: Hokkaido
+                  Chuo Bus, JR Hokkaido Bus, and Jotetsu Bus.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide fp-auto-height">
+          <div class="container">
+            <div class="transport-item-wrapper row">
+              <div class="transport-photo col-md-5 transport-photo2"></div>
+              <div class="col-md-7 transport-desc-wrapper">
+                <div class="transport-desc">Streetcar <br>The Sapporo Streetcar is Japan’s northernmost streetcar line serving a loop that covers the southwestern area of the downtown core where there is no subway service. Look out the window of the slow moving streetcar to catch
+                  a glimpse into residential areas and shopping arcades with a different look than downtown.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide fp-auto-height">
+          <div class="container">
+            <div class="transport-item-wrapper row">
+              <div class="transport-photo col-md-5 transport-photo3"></div>
+              <div class="col-md-7 transport-desc-wrapper">
+                <div class="transport-desc">Railway <br>From JR Sapporo Station as the starting point, you may ride on trains bound for Teine and Atsubetsu (Hakodate Main Line), Shin-Sapporo (Chitose Line), and Ainosato (Gakuen-Toshi Line). Take the route that goes with your travel
+                  plan!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide fp-auto-height">
+          <div class="container">
+            <div class="transport-item-wrapper row ">
+              <div class="transport-photo col-md-5 transport-photo4"></div>
+              <div class="col-md-7 transport-desc-wrapper">
+                <div class="transport-desc">Subway <br>The Sapporo Municipal Subway is the most accessible form of transportation for sightseeing in Sapporo. It operates three lines: the Namboku Line, Tozai Line, and Toho Line. All of these lines can be boarded at Odori Station,
+                  linking the central part of Sapporo with the northern, southern, western, and eastern areas.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide fp-auto-height">
+          <div class="container">
+            <div class="transport-item-wrapper row">
+              <div class="transport-photo col-md-5 transport-photo5"></div>
+              <div class="col-md-7 transport-desc-wrapper">
+                <div class="transport-desc">Velotaxi <br>Velotaxi is an environmentally friendly, three-wheeled taxi service that was developed in Germany. These taxis were introduced in Sapporo in 2008, and there are currently five of them in operation, mainly in central Sapporo.
+                  Riding in a Velotaxi, you can enjoy comfortable travel while communicating with the driver and people walking down the road.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="onesixth-spacing">
+          <div class="snow-bg">
+            <div class="snow-wrapper">
+              <div class="snow snow1"></div>
+              <div class="snow snow2"></div>
+              <div class="snow snow3"></div>
+            </div>
+          </div>
+
+        </div>
+
+
       </div>
     </div>
-    <div class="section section7 fp-auto-height">
-      <div class="wrapper">
-        <div class="onesixth">
-          <div class="title">Contact</div>
+    <div class="section section7 odd">
+      <div class="wrapper-contact">
+        <div class="onesixth-title">
+          <div class="title">
+            <div class="logo-contact"></div>
+          </div>
         </div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
-        <div class="onesixth"></div>
+        <div class="onesixth-spacing"></div>
+        <div class="onesixth-spacing container">
+          <div class="contact-text-1">For any questions, please call <br><span> (available languages: Japanese, English, Chinese, Korean )</span></div>
+        </div>
+        <div class="onesixth-spacing">
+          <div class="container">
+            <div class="contact-text-2">011-222-4894</div>
+          </div>
+        </div>
+        <div class="onesixth-spacing"></div>
+        <div class="onesixth-spacing"></div>
       </div>
     </div>
 
